@@ -16,7 +16,7 @@ IMG_WIDTH    = 224
 NUM_CLASSES  = 10
 AUTOTUNE     = tf.data.experimental.AUTOTUNE
 IMG_SIZE = (224, 224)
-EPOCHS = 20
+EPOCHS = 50
 initial_epoch  = 0
 
 
@@ -72,7 +72,7 @@ ckpt_cb = ModelCheckpoint(
     save_freq='epoch'              # 每个 epoch 都保存
 )
 
-model = load_model('checkpoints/resnet50_finetune.10.h5')
+model = load_model('checkpoints/resnet50_finetune.20.h5')
 
 history = model.fit(
     dataset,
